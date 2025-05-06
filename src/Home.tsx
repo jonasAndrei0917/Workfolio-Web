@@ -24,19 +24,14 @@ function Home() {
     else if (contactInView) navigate("/contact", { replace: true });
   }, [aboutInView, worksInView, experienceInView, contactInView, navigate]);
 
-  console.log("About In View: " + aboutInView);
   return (
     <div className="flex flex-col scroll-smooth">
       <div ref={aboutRef} id="about" className="pt-15 lg:pt-0">
         <AboutMe />
       </div>
 
-      <div
-        ref={worksRef}
-        id="works"
-        className="min-h-screen flex items-center justify-center bg-green-200 pt-15"
-      >
-        <h1 className="text-5xl font-bold">Recent Works</h1>
+      <div ref={worksRef} id="works" className="pt-15 lg:pt-0">
+        <AboutMe />
       </div>
 
       <div

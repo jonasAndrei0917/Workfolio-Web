@@ -1,6 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AboutMe from "../pages/aboutMe";
-import Experience from "../pages/experience";
 import Layout from "../components/Layout";
 import Home from "../Home";
 

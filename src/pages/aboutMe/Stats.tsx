@@ -18,7 +18,7 @@ function Stats({ size = "base" }: { size?: StatSize }) {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 md:gap-20 lg:gap-40">
+    <div className="flex flex-col md:flex-row gap-6 md:gap-16 lg:gap-40">
       {statItems.map(({ icon, value, label }, index) => (
         <div key={index} className="flex items-center gap-4">
           <img src={icon} className={sizeClasses[size]} />

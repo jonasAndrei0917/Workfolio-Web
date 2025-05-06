@@ -5,13 +5,8 @@ function Navbar() {
   let location = useLocation();
   const [activeLink, setActiveLink] = useState("");
 
-  // Set the active link with a delay
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setActiveLink(location.pathname); // Set the active link after a delay
-    }, 500); // 1-second delay
-
-    return () => clearTimeout(timeout); // Cleanup timeout
+    setActiveLink(location.pathname);
   }, [location.pathname]);
 
   const getTitle = () => {
@@ -36,10 +31,10 @@ function Navbar() {
     }
   };
 
-  const linkStyle = (path: string) => (activeLink === path ? "font-bold" : ""); // Apply "font-bold" after the delay
+  const linkStyle = (path: string) => (activeLink === path ? "font-bold" : "");
 
   return (
-    <nav className="fixed top-0 w-full bg-primary-background text-primary-dark p-4 flex items-center">
+    <nav className="fixed top-0 w-full bg-primary-background text-primary-dark p-5 px-8 flex items-center">
       <h1 className="text-2xl sm:text-3xl md:text-4xl text-primary-dark font-bold">
         {getTitle()}
       </h1>

@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 import AboutMe from "./pages/aboutMe";
 import Experience from "./pages/experience";
+import Works from "./pages/recentWorks";
 
 function Home() {
   const navigate = useNavigate();
@@ -26,12 +27,12 @@ function Home() {
 
   return (
     <div className="flex flex-col scroll-smooth">
-      <div ref={aboutRef} id="about" className="pt-15 lg:pt-0">
+      <div ref={aboutRef} id="about">
         <AboutMe />
       </div>
 
-      <div ref={worksRef} id="works" className="pt-15 lg:pt-0">
-        <AboutMe />
+      <div ref={worksRef} id="works">
+        <Works />
       </div>
 
       <div

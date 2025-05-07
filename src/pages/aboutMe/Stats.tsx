@@ -4,7 +4,20 @@ import Projects from "../../assets/projects.png";
 
 type StatSize = "base" | "md" | "lg";
 
-function Stats({ size = "base" }: { size?: StatSize }) {
+type Props = {
+  size?: StatSize;
+  details: {
+    description: string;
+    experienceYears: number;
+    projects: number;
+    numberOfCoffee: number;
+  };
+};
+
+function Stats({ size = "base", details }: Props) {
+  if (!details) return null;
+
+  const { numberOfCoffee, projects, experienceYears } = details;
   const sizeClasses: Record<StatSize, string> = {
     base: "h-8 text-xl",
     md: "h-10 text-2xl",
@@ -12,13 +25,21 @@ function Stats({ size = "base" }: { size?: StatSize }) {
   };
 
   const statItems = [
-    { icon: Coffee, value: "5794", label: "Cups of Coffee" },
-    { icon: Projects, value: "4", label: "Projects Participated" },
-    { icon: Experience, value: "2", label: "Years of Experience" },
+    { icon: Coffee, value: numberOfCoffee, label: "Cups of Coffee" },
+    {
+      icon: Projects,
+      value: projects,
+      label: "Projects Participated",
+    },
+    {
+      icon: Experience,
+      value: experienceYears,
+      label: "Years of Experience",
+    },
   ];
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 md:gap-20 lg:gap-40">
+    <div className="flex flex-col md:flex-row gap-6 md:gap-16 lg:gap-40">
       {statItems.map(({ icon, value, label }, index) => (
         <div key={index} className="flex items-center gap-4">
           <img src={icon} className={sizeClasses[size]} />

@@ -34,7 +34,7 @@ function Navbar() {
   const linkStyle = (path: string) => (activeLink === path ? "font-bold" : "");
 
   return (
-    <nav className="fixed top-0 w-full bg-primary-background text-primary-dark p-5 px-8 flex items-center">
+    <nav className="fixed top-0 w-full bg-primary-background text-primary-dark p-5 px-8 flex items-center z-10">
       <h1 className="text-2xl sm:text-3xl md:text-4xl text-primary-dark font-bold">
         {getTitle()}
       </h1>

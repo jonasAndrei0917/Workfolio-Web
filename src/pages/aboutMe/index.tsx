@@ -42,10 +42,6 @@ function AboutMe() {
     }
   };
 
-  useEffect(() => {
-    handleGetData();
-  }, []);
-
   return (
     <div className="flex flex-col bg-primary-bg min-h-screen pt-35 sm:pt-20 md:pt-0">
       {/* Content */}

@@ -35,11 +35,7 @@ function Home() {
         <Works />
       </div>
 
-      <div
-        ref={experienceRef}
-        id="experience"
-        className="min-h-screen flex items-center justify-center bg-yellow-200 pt-15"
-      >
+      <div ref={experienceRef} id="experience">
         <Experience />
       </div>
 

@@ -3,14 +3,14 @@ import PrimaryButton from "../../components/PrimaryButton";
 
 interface Props {
   text: string;
-  cardStyle?: string;
+  className?: string;
   textStyle?: string;
   onClick: () => void;
 }
 
-function AboutMeCard({ text, cardStyle, textStyle, onClick }: Props) {
+function AboutMeCard({ text, className, textStyle, onClick }: Props) {
   return (
-    <Card cardStyle={`${cardStyle}`}>
+    <Card className={`${className}`}>
       <p className={`${textStyle}`}>{text}</p>
       <PrimaryButton label="Download CV" onClick={onClick} />
     </Card>

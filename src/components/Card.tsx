@@ -2,13 +2,13 @@ import { ReactNode, useRef } from "react";
 import { motion } from "framer-motion";
 
 interface Props {
-  cardStyle?: string;
+  className?: string;
   children: ReactNode;
   whileHover?: boolean;
   onClick?: () => void;
 }
 
-function Card({ cardStyle, children, whileHover = false, onClick }: Props) {
+function Card({ className, children, whileHover = false, onClick }: Props) {
   const pointerDown = useRef<{ x: number; y: number } | null>(null);
 
   const handlePointerDown = (e: React.PointerEvent) => {
@@ -36,7 +36,7 @@ function Card({ cardStyle, children, whileHover = false, onClick }: Props) {
           ? { scale: 1.05, boxShadow: "0px 5px 15px rgba(0,0,0,0.3)" }
           : undefined
       }
-      className={`bg-white shadow-lg rounded-2xl md:max-w-2xl flex flex-col items-center justify-around p-6 sm:p-10 ${cardStyle}`}
+      className={`bg-white shadow-lg rounded-2xl md:max-w-2xl flex flex-col items-center justify-around p-6 sm:p-10 ${className}`}
     >
       {children}
     </motion.div>

@@ -9,4 +9,5 @@ export default defineConfig({
     host: "192.168.100.11",
     port: 5173,
   },
+  base: "/Workfolio-Web/",
 });

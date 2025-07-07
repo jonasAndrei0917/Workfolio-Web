@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import AboutMe from "./pages/aboutMe";
 import Experience from "./pages/experience";
 import Works from "./pages/recentWorks";
+import ContactMe from "./pages/contactMe";
 
 function Home() {
   const navigate = useNavigate();
@@ -39,12 +40,8 @@ function Home() {
         <Experience />
       </div>
 
-      <div
-        ref={contactRef}
-        id="contact"
-        className="min-h-screen flex items-center justify-center bg-red-200 pt-15"
-      >
-        <h1 className="text-5xl font-bold">Contact Me</h1>
+      <div ref={contactRef} id="contact">
+        <ContactMe />
       </div>
     </div>
   );

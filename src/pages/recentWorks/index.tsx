@@ -40,7 +40,6 @@ function Works() {
           ...doc.data(),
         })) || [];
 
-      console.log("Experience data: ", recentWorks);
       setRecentWorks(recentWorks);
 
       // dispatch(setUserInfo(aboutMeData));
@@ -61,7 +60,7 @@ function Works() {
           <Card
             key={work.id}
             whileHover={true}
-            cardStyle="w-[250px] sm:w-[300px] md:w-[350px] flex-shrink-0 cursor-pointer"
+            className="w-[250px] sm:w-[300px] md:w-[350px] flex-shrink-0 cursor-pointer"
             onClick={() => handleOnClick(work)}
           >
             <h2 className="text-xl font-bold text-primary-dark text-center">
@@ -78,7 +77,7 @@ function Works() {
           <Card
             key={work.id}
             whileHover={true}
-            cardStyle="w-[250px] sm:w-[300px] md:w-[350px] flex-shrink-0 cursor-pointer"
+            className="w-[250px] sm:w-[300px] md:w-[350px] flex-shrink-0 cursor-pointer"
             onClick={() => handleOnClick(work)}
           >
             <h2 className="text-xl font-bold text-primary-dark text-center ">
